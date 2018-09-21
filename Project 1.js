@@ -1,8 +1,9 @@
 class animal {
+
     constructor(weight, age, height) {
-        this._weight = weight;
-        this._age = age;
-        this._height = height;
+        if (weight === undefined) this.weight = 15; else this.weight = weight;
+        if (age === undefined) this.age = 2; else this.age = age;
+        if (height === undefined) this.height = 4; else this.height = height;
     }
 
     get weight() {
@@ -31,7 +32,7 @@ class animal {
     // Sets the weight of the animal, if it has a valid weight input
     set weight(newWeight) {
         if (isValidInt(newWeight)) {
-            this.weight = newWeight
+            this._weight = newWeight
         } else console.log('Not a valid weight!')
     }
 
@@ -49,7 +50,6 @@ function randomNumber(number) {
 // Helper Functions
 
 // Validates a input to make sure that it's an integer, and above zero
-
 
 
 class dog extends animal {
