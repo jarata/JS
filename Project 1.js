@@ -20,23 +20,25 @@ class animal {
             this.height = newHeight;
         }
 
+        // Sets the age of the animal, if it has a valid age input
         function setAge(newAge) {
-            if (Number.isInteger(newAge) && newAge > 0) {
-                this.age = newAge;
-            } else {
-                
-            }
-
+            if (isValidInt(newAge)) {
+                this.age = newAge
+            } else alert('Not a valid age!')
         }
 
+        // Sets the weight of the animal, if it has a valid weight input
         function setWeight(newWeight) {
-            if (Number.isInteger(newWeight) && newWeight > 0) {
-                this.weight = newWeight;
-            } else {
-                return 'Not a valid weight!'
-            }
+            if (isValidInt(newWeight)) {
+                this.weight = newWeight
+            } else alert('Not a valid weight!')
         }
     }
+}
+
+// Validates a input to make sure that it's an integer, and above zero
+function isValidInt(input) {
+    return Number.isInteger(input) && input > 0;
 }
 
 class dog extends animal {
