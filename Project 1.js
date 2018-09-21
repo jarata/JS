@@ -73,6 +73,17 @@ class dog extends animal {
         this._color = newColor;
     }
 
+    // Function that compares two dogs and returns which one is heavier
+    function isLarger (dogOne, dogTwo){}
+
+    // Function that compares two dogs and returns which one is older
+
+    function isOlder (dogOne, dogTwo){}
+
+    // Function that compares two dogs and returns which one is shorter
+
+    function isShorter (dogOne, dogTwo){}
+
 }
 
 
